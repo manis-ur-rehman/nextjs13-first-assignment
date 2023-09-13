@@ -1,17 +1,17 @@
 import Link from "next/link";
 
-export default function RestaurantCard() {
+export default function RestaurantCard({resturant}:any) {
 	return (
 		<div className="w-64 h-72 m-3 rounded overflow-hidden border cursor-pointer">
 			<Link href="/restaurant/mcg">
 				<img
-					src="https://resizer.otstatic.com/v2/photos/wide-huge/2/31852905.jpg"
+					src={resturant.image}
 					alt=""
 					className="w-full h-36"
 				/>
 				<div className="p-1">
 					<h3 className="font-bold text-2xl mb-2 text-black">
-						MCG
+						{resturant.name}
 					</h3>
 					<div className="flex items-start text-gray-700">
 						<div className="flex mb-2">*****</div>
